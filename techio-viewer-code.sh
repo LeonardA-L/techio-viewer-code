@@ -1,5 +1,7 @@
 #!/bin/bash
 
-mv $1 /tmp/viewer-json/file.json
+code=$(cat $1)
 
-echo 'CG> open --static-dir /tmp/viewer-json /json.html'
+sed -i -e "s/CODE/$code/g" /tmp/viewer-code/code.html
+
+echo 'CG> open --static-dir /tmp/viewer-code /code.html'
