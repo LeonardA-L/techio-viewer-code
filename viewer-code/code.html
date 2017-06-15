@@ -5,6 +5,8 @@
     <meta charset="utf-8" />
 
     <script src="src-min-noconflict/ace.js"></script>
+    <script src="src-min-noconflict/theme-twilight.js" type="text/javascript" charset="utf-8"></script>
+    <script src="src/mode-CODEMODE.js" type="text/javascript" charset="utf-8"></script>
     <style type="text/css">
       #editor {
         width: 100%;
@@ -39,6 +41,7 @@
         }
 
         var editor = ace.edit("editor");
+        editor.setTheme("ace/theme/twilight");
         editor.setOptions({
           maxLines: Infinity
         });
