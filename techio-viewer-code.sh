@@ -1,7 +1,5 @@
 #!/bin/bash
 
-code=$(cat $1)
-
-sed -i -e "s/CODE/$code/g" /tmp/viewer-code/code.html
+mv $1 /tmp/viewer-code/code.code
 
 echo 'CG> open --static-dir /tmp/viewer-code /code.html'
